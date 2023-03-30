@@ -1,17 +1,17 @@
 use rocket::serde::{Serialize, Deserialize};
 
-#[derive(Debug, Clone, Serialize)]
+#[derive(Debug, Deserialize, Serialize)]
 pub struct ResponseMessage {
     pub message: String,
 }
 
-#[derive(Debug, Clone, Serialize)]
+#[derive(Debug, Deserialize, Serialize)]
 pub struct Record {
     pub username: String,
     pub funds: usize,
 }
 
-#[derive(Debug, Serialize)]
+#[derive(Debug, Deserialize, Serialize)]
 pub struct Records {
     pub records: Vec<Record>
 }
